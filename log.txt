@@ -1,0 +1,110 @@
+C3350 Developer Log
+
+Iteration 3 dev tasks:
+* Hide start button on project list view (2hr) - Scott
+* Acceptance tests: stop work now timer (5hr) - Jaden
+* Acceptance tests: edit tasks, projects (5hr) - Tanish, Ty
+* Acceptance tests: create tasks, projects (5hr) - Scott
+* Integration test access layer seam (3hr) - Jaden
+* Database layer (and tests) for notes (1hr) - Scott
+* Add notes as a single text field to project (3h) - Scott
+* Add test boilerplate code (30m) - Scott
+* Cleanup (I2 feedback) (3hr) - Ty
+* Validate objects in the business layer using DatabaseValidator object (1hr) - Scott
+* Collect and format documentation (1hr) - Ty
+Log:
+July 13 - Jaden, Tanish, Ty, Scott: Iteration review and a little bit of planning. 1h
+* Collect and format documentation (1hr)
+
+July 15 - Jaden, Tanish, Ty, Scott: Planned user stories and dev tasks for the iteration. Allocated dev time for the next week. 1h
+
+July 16 - Tanish, Scott: Went over the code base and discussed how to approach the various dev tasks that we created on July 15. We looked through the acceptance tests in SRSYS 3. 1h
+
+July 16 - Scott: Added test boilerplate code similar to the SRSYS project. 0.5h
+* Add test boilerplate code (30m)
+
+July 16 - Scott: Got the integration and unit tests working by copying over the PPA.script file to the correct location. This is necessary in our project in order to reset the IDENTITY counts on the table. 3h
+* Integration test access layer seam (3hr)
+
+July 16 - Scott: Added notes to the project views and added persistence assertions to the tests. 4h
+* Database layer (and tests) for notes (1hr) - Scott
+* Database layer (and tests) for notes (1hr)
+* Add notes as a single text field to project (3h)
+* Add test boilerplate code (30m)
+
+July 18 - Jaden: Implemented the business - persistence seam integration tests. 1.5h
+* Integration test access layer seam (3hr)
+
+July 19 - Jaden: Added more in depth business - persistence integration tests, and added StatusCalculation integration tests. 1.5h
+* Integration test access layer seam (3hr)
+
+July 12 - Scott: Cleaned up some testing. 0.5h
+
+July 20 - Jaden, Ty: Met to discuss acceptance tests and divide work. 10m
+
+July 20 - Ty: Puttered around getting up to speed with Access testing and the project after taking a week away. Didn’t write much code, but, did take me a while, so I figured I’d write it down. 2h
+
+July 21 - Ty: Approved my first pull request (!), opened branch ty-acceptance-keep-track-project, poked around with the placeholder espresso stuff. 1hr
+* Acceptance tests: edit tasks, projects (5hr)
+
+July 22 - Ty, Tanish, Scott: Got Espresso to work inside PPA. 0.75h
+* Acceptance tests: stop work now timer (5hr)
+* Acceptance tests: edit tasks, projects (5hr)
+* Acceptance tests: create tasks, projects (5hr)
+
+July 22 - Ty: Added RunAcceptanceTests under comp3350.ppa.tests, and added AcceptanceTests under comp3350.ppa.tests/acceptance. Also divided acceptance test classes into three classes.  Included a couple of rough methods in the classes, as well as comments indicating a rough script to implement. 1.5h
+* Acceptance tests: stop work now timer (5hr)
+* Acceptance tests: edit tasks, projects (5hr)
+* Acceptance tests: create tasks, projects (5hr)
+
+July 22 - Tanish: Studied and watched couple of videos regarding acceptance tests and espresso. 1.25h
+* Acceptance tests: edit tasks, projects (5hr)
+
+July 24 - Jaden: Figured out how to get the Espresso acceptance tests running and moved our test files to the correct place. Partially implemented the acceptance test for creating projects, currently it fails trying to open the edit/delete menu. 4h
+* Acceptance tests: create tasks, projects (5hr)
+
+July 24 - Ty: Renamed one of the acceptance test classes, added comments indicating the script for the two test methods within EditProjectEditTasks class. 2h
+* Acceptance tests: edit tasks, projects (5hr)
+
+July 24 - Ty: Reviewed iteration 2 feedback and made a list of to-dos for code cleanup before iteration 3 submission, fixed bracket placement inconsistency and removed unused import from ProjectViewActivity. 1h. 
+* Cleanup (I2 feedback) (3hr)
+
+July 24 - Scott: Made some progress on the acceptance tests. 0.75h
+* Acceptance tests: stop work now timer (5hr)
+* Acceptance tests: edit tasks, projects (5hr)
+* Acceptance tests: create tasks, projects (5hr)
+
+July 24 - Jaden: Worked on the global timer acceptance tests. Figured out how to avoid waiting for the timer to finish and implemented one full acceptance test. 2.5h
+* Acceptance tests: stop work now timer (5hr)
+
+July 24 - Ty: Fixed formatting issues: brace placement, eliminated single=line if blocks, and removed the java docs in the single file that had them, and optimized imports. 30m 
+* Cleanup (I2 feedback) (3hr)
+
+July 24 - Ty: Additional code cleanup, formatting, test adjustments, error throwing changes. 30m
+* Cleanup (I2 feedback) (3hr)
+
+July 25 - Jaden: Finished the StopWorkTimerTest acceptance tests, adding three more scripts to follow. Added a Thread.sleep to avoid race conditions in the tests. 1h
+* Acceptance tests: stop work now timer (5hr)
+
+July 26 - Jaden, Scott, Ty: Discussed next steps for the project and code cleanup plans. Made the db save immediately, allowing us to remove the extra Main.startUp() and Main.shutDown() calls. 1h
+* Cleanup (I2 feedback) (3hr)
+
+July 26 - Jaden: Tried to fix pressing cancel on the date picker before realizing it wasn't broken. Fixed a code smell in the ProjectCard. 20m
+* Cleanup (I2 feedback) (3hr)
+
+July 26 - Scott: Hide timer in project list when it is in stopped state. 1.5h
+* Hide start button on project list view (2hr)
+
+July 25-26 - Tanish: Acceptance tests for Tasks and projects. 7h
+* Acceptance tests: edit tasks, projects (5hr)
+* Acceptance tests: create tasks, projects (5hr)
+
+July 26 - Jaden, Scott: Noticed that the task list wasn't scrolling again, replaced the ListViews with LinearLayouts to force it to scroll. 1h
+
+July 26 - Jaden, Scott: Fixed up acceptance tests to meet new changes, fixed bug with LinearLayout where Tasks would get duplicated. 1.5h
+* Acceptance tests: stop work now timer (5hr)
+* Acceptance tests: edit tasks, projects (5hr)
+* Acceptance tests: create tasks, projects (5hr)
+
+July 27 - Ty: (Almost) finished README and dev log, just need a review from the group before submission. 1hr
+* Collect and format documentation (1hr)

@@ -1,0 +1,16 @@
+C3350 Iteration 2 Retrospective
+
+Things that went well:
+* Communication through Discord, both generally and in passing work between each other as needed
+* Organization of dev tasks using Trello
+* Planning, particularly making time commitments for working hours
+
+Things that went less well:
+* Git branch organization devolved halfway through the iteration into everybody working on one big branch
+* A more thorough approval process
+* Planning of user stories before planning dev tasks
+* Distribution of labour
+
+Goal: A more strict, thorough code approval process
+A concrete measure of our success toward this goal will be the presence of smaller branches, and more branches.
+

@@ -1,0 +1,18 @@
+CREATE SCHEMA PUBLIC AUTHORIZATION DBA
+CREATE TABLE Projects(ProjectID INTEGER NOT NULL IDENTITY PRIMARY KEY,Name VARCHAR(255) NOT NULL,Description VARCHAR(1024) NOT NULL,DueDate VARCHAR(10) NOT NULL,FocusMinutes INTEGER NOT NULL, Notes LONGVARCHAR)
+CREATE TABLE Tasks(TaskID INTEGER NOT NULL IDENTITY PRIMARY KEY,Title VARCHAR(255) NOT NULL,Description VARCHAR(1024) NOT NULL,DueDate VARCHAR(10) NOT NULL,Status VARCHAR(20) NOT NULL,EstimatedTime INTEGER NOT NULL,ProjectID INTEGER NOT NULL,FOREIGN KEY (ProjectID) REFERENCES Projects(ProjectID) ON DELETE CASCADE)
+CREATE USER ADMIN PASSWORD ""
+GRANT DBA TO ADMIN
+SET WRITE_DELAY 0
+SET SCHEMA PUBLIC
+INSERT INTO Projects VALUES(0,'Make a cool app','Use Android Studio to make a cool app.','2022-08-02',30,'Grandma probably can help')
+INSERT INTO Projects VALUES(1,'Build a garden box','Make a easy-to-access garden box for grandma. It needs to have proper irrigation and it cannot have any kind of treated wood.','2022-08-30',60,'Call John for screws' + Char(10) + 'Don''t use treated wood!')
+INSERT INTO Tasks VALUES(0,'Download Android Studio','visit the website and get it on your machine','2022-08-12','DONE',40,0)
+INSERT INTO Tasks VALUES(1,'Code sensei moment','code like crazy, but in a disciplined way.','2022-08-16','IN_PROGRESS',40,0)
+INSERT INTO Tasks VALUES(2,'Find customers','Advertise in the coffee news. Reach out to Brian.','2022-08-20','TODO',40,0)
+INSERT INTO Tasks VALUES(3,'Integrate PayPal','There is an API guide if you search for it on Google.','2022-08-25','TODO',40,0)
+INSERT INTO Tasks VALUES(4,'Profit','Make sure you get your rake ready for all the money that will be coming in.','2022-08-30','TODO',40,1)
+INSERT INTO Tasks VALUES(5,'Get wood from EG Penners','Pine, Spruce, or Fir is fine. NOT treated wood!','2022-08-03','TODO',40,1)
+INSERT INTO Tasks VALUES(6,'Purchase handsaw','Check Kijiji and VarageSale. Mark had one for sale also.','2022-08-04','TODO',40,1)
+INSERT INTO Tasks VALUES(7,'Cut boards','Use the guide from BoardAtHome magazine (pg 4)','2022-08-12','TODO',40,1)
+INSERT INTO Tasks VALUES(8,'Fill with dirt','Call Arnald''s Aggregates at 1-204-123-4567 and ask for peat moss and garden soil.','2022-08-18','TODO',40,1)

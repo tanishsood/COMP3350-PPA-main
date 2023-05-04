@@ -1,0 +1,42 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="comp3350.ppa">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity
+            android:name=".presentation.ProjectsListActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="comp3350.ppa.presentation.ProjectAddActivity"
+            android:label="PPA: Add Project"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity
+            android:name=".presentation.ProjectViewActivity"
+            android:label="PPA: Project Task List"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="comp3350.ppa.presentation.ProjectsListActivity" />
+        </activity>
+        <activity
+            android:name=".presentation.TaskAddEditActivity"
+            android:label="PPA: Project Add Task"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="comp3350.ppa.presentation.ProjectViewActivity" />
+        </activity>
+
+    </application>
+
+</manifest>
